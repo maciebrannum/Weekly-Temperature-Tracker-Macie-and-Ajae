@@ -33,4 +33,6 @@ plt.xlabel("Day")
 plt.ylabel("Temperature (°F)")
 plt.show()
 ```
+When we ran the cells for our code it generated a graph plotting the weekly temerature treds with temperature on the y axis and the day on the x axis.
+
 Progress: We took daily temperature data from the month of March and put it into a structured dataset that states the high temperatures for each day of the week. We also used this to calculate the mean high for each day. We used this data to create a line graph showing the temperature trends throughout the week. This line graph helps us observe patterns, how the temperature fluctuates, and any noticeable changes in the temperatures. Next, we want to be able to implement the lows for each day as well as the high temperatures. 
