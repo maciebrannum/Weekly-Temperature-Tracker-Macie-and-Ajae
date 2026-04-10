@@ -3,13 +3,17 @@ title: "weekly temperature tracker"
 format: html
 ---
 Our project will be a weekly temperature tracker program. The program will record daily temperatures for a week, calculate the average, minimum, and maximum, and generate a graph showing trends, highlighting the highest and lowest temperature days.  
+
 Goals: The goal of our program is to track the weekly high and low temperatures in Oklahoma City on a daily basis and record them in our program. The program will then calculate the average, minimum, and maximum temperatures while also generating a graph showing trends. 
+
 Data Resources: National Weather Service website gives the high and low temperatures every day in Oklahoma City. Apple Weather App also gives temperatures in Oklahoma City. 
+
+Code example using python and positron for one week: 
 ## Initial Code / Data
 
 ```{python}
 days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
-temps = [72,75,70,68,74,77,73]
+temps = [86,80,77,84,75,76,79]
 
 avg_temp = sum(temps)/len(temps)
 min_temp = min(temps)
