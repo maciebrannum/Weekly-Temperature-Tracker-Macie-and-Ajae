@@ -1,0 +1,5 @@
+---
+title: "weekly temperature tracker"
+format: html
+---
+Our project will be a weekly temperature tracker program. The program will record daily temperatures for a week, calculate the average, minimum, and maximum, and generate a graph showing trends, highlighting the highest and lowest temperature days. 
