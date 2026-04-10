@@ -4,4 +4,4 @@ format: html
 ---
 Our project will be a weekly temperature tracker program. The program will record daily temperatures for a week, calculate the average, minimum, and maximum, and generate a graph showing trends, highlighting the highest and lowest temperature days. 
 Goals: The goal of our program is to track the weekly high and low temperatures in Oklahoma City on a daily basis and record them in our program. The program will then calculate the average, minimum, and maximum temperatures while also generating a graph showing trends. 
-Data Resources: National Weather Service website gives the high and low temperatures every day in Oklahoma City. Apple Weather App also gives temperatures in Shawnee. 
+Data Resources: National Weather Service website gives the high and low temperatures every day in Oklahoma City. Apple Weather App also gives temperatures in Oklahoma City. 
