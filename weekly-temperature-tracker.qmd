@@ -36,3 +36,38 @@ plt.show()
 When we ran the cells for our code it generated a graph plotting the weekly temerature treds with temperature on the y axis and the day on the x axis.
 
 Progress: We took daily temperature data from the month of March and put it into a structured dataset that states the high temperatures for each day of the week. We also used this to calculate the mean high for each day. We used this data to create a line graph showing the temperature trends throughout the week. This line graph helps us observe patterns, how the temperature fluctuates, and any noticeable changes in the temperatures. Next, we want to be able to implement the lows for each day as well as the high temperatures. 
+
+New Code:
+```{python}
+days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+temps = [86,80,77,84,75,76,79]
+
+avg_temp = sum(temps)/len(temps)
+min_temp = min(temps)
+max_temp = max(temps)
+
+print("Average:", round(avg_temp, 2))
+print("Min:", min_temp)
+print("Max:", max_temp)
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+plt.plot(days, temps, marker="o")
+
+min_temp = min(temps)
+max_temp = max(temps)
+
+min_day = days[temps.index(min_temp)]
+max_day = days[temps.index(max_temp)]
+
+plt.scatter(min_day, min_temp, s=200, color='red', label='Min')
+plt.scatter(max_day, max_temp, s=200, color='green', label='Max')
+
+plt.title("Weekly Temperature Trends")
+plt.xlabel("Day")
+plt.ylabel("Temperature (°F)")
+plt.grid(True)
+plt.show()
+```
