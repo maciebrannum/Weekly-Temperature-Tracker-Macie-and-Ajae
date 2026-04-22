@@ -39,35 +39,38 @@ Progress: We took daily temperature data from the month of March and put it into
 
 New Code:
 ```{python}
-days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
-temps = [86,80,77,84,75,76,79]
-
-avg_temp = sum(temps)/len(temps)
-min_temp = min(temps)
-max_temp = max(temps)
-
-print("Average:", round(avg_temp, 2))
-print("Min:", min_temp)
-print("Max:", max_temp)
-```
-
-```{python}
+plt.figure()
 import matplotlib.pyplot as plt
 
-plt.plot(days, temps, marker="o")
+days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
-min_temp = min(temps)
-max_temp = max(temps)
+lows = [42, 42, 44, 51, 58, 59, 65]
+highs = [73, 71, 76, 80, 83, 77, 82]
 
-min_day = days[temps.index(min_temp)]
-max_day = days[temps.index(max_temp)]
+# two lines only
+plt.plot(days, highs, marker="o", label="Highs", color="red")
+plt.plot(days, lows, marker="o", label="Lows", color="blue")
 
-plt.scatter(min_day, min_temp, s=200, color='red', label='Min')
-plt.scatter(max_day, max_temp, s=200, color='green', label='Max')
+# combine for min/max
+all_temps = highs + lows
+all_days = days + days
+all_values = highs + lows
 
-plt.title("Weekly Temperature Trends")
+min_temp = min(all_temps)
+max_temp = max(all_temps)
+
+min_index = all_values.index(min_temp)
+max_index = all_values.index(max_temp)
+
+# small highlights
+plt.scatter(all_days[min_index], min_temp, s=200, color="black", label="Min Temp")
+plt.scatter(all_days[max_index], max_temp, s=200, color="black", label="Max Temp")
+
+plt.title("Weekly Temperatures for 4/6/26-4/12/26 in Oklahoma City")
 plt.xlabel("Day")
 plt.ylabel("Temperature (°F)")
 plt.grid(True)
+plt.legend()
+
 plt.show()
 ```
