@@ -2,42 +2,13 @@
 title: "weekly temperature tracker"
 format: html
 ---
-Our project will be a weekly temperature tracker program. The program will record daily temperatures for a week, calculate the average, minimum, and maximum, and generate a graph showing trends, highlighting the highest and lowest temperature days.  
+Our project is a weekly temperature tracker program that records daily high and low temperatures for a seven-day period in Oklahoma City. The program stores these values in lists, calculates summary statistics (average, minimum, and maximum temperatures), and generates a line graph to visualize temperature trends. The graph also highlights the exact days on which the highest and lowest temperatures occur.
 
-Goals: The goal of our program is to track the weekly high and low temperatures in Oklahoma City on a daily basis and record them in our program. The program will then calculate the average, minimum, and maximum temperatures while also generating a graph showing trends. 
+Goals: The goal of our program is to collect daily high and low temperature data for one week in Oklahoma City, compute summary statistics (mean, minimum, and maximum), and visualize the data using a graph. This allows us to observe patterns, compare temperature fluctuations, and identify extreme values throughout the week.
 
-Data Resources: National Weather Service website gives the high and low temperatures every day in Oklahoma City. Apple Weather App also gives temperatures in Oklahoma City. 
+Data Resources: Temperature data was collected from the National Weather Service website. Daily high and low temperatures for the dates 4/6/26-4/12/26 in Oklahoma City were manually recorded and entered into the program as lists. The Apple Weather App also gives temperatures in Oklahoma City. 
 
-Code example using python and positron for one week: 
-## Initial Code / Data
-
-```{python}
-days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
-temps = [86,80,77,84,75,76,79]
-
-avg_temp = sum(temps)/len(temps)
-min_temp = min(temps)
-max_temp = max(temps)
-
-print("Average:", avg_temp)
-print("Min:", min_temp)
-print("Max:", max_temp)
-```
-
-```{python}
-import matplotlib.pyplot as plt
-
-plt.plot(days, temps, marker="o")
-plt.title("Weekly Temperature Trends")
-plt.xlabel("Day")
-plt.ylabel("Temperature (°F)")
-plt.show()
-```
-When we ran the cells for our code it generated a graph plotting the weekly temerature treds with temperature on the y axis and the day on the x axis.
-
-Progress: We took daily temperature data from the month of March and put it into a structured dataset that states the high temperatures for each day of the week. We also used this to calculate the mean high for each day. We used this data to create a line graph showing the temperature trends throughout the week. This line graph helps us observe patterns, how the temperature fluctuates, and any noticeable changes in the temperatures. Next, we want to be able to implement the lows for each day as well as the high temperatures. 
-
-New Code:
+Final Code:
 ```{python}
 plt.figure()
 import matplotlib.pyplot as plt
@@ -74,3 +45,21 @@ plt.legend()
 
 plt.show()
 ```
+
+Code Explanation:
+The lists 'highs' and 'lows' store the daily temperature values for the week. The lists are combined into 'all_temps' to determine the overall minimum and maximum temperatures across both datasets.
+The 'min()' and 'max()' functions identify the lowest and highest values. The 'index()' function is used to locate the position of these values within the lists so the correct day can be identified and highlighted on the graph.
+The 'days' list is used to label the x-axis so each temeprature value corresponds to the correct day of the week. 
+The 'plt.plot()' function creates two lines that represent the high and low temperatures. The 'plt.scatter()' function highlights the minimum and maximum temperatures using larger markers to make them distinct from the rest of the temperatures. 
+Labels, a title, a grid, and a legend are added to improve readability and clarity of the graph.
+
+How to Run This Project:
+To run this project, the user needs Python installed along with matplotlib library. The code can be executed in Positron, Jupyter Notebook, or any Python-compatible environment. 
+1. Enter daily high and low temperatures into the 'highs' and 'lows' lists.
+2. Run the code cells to calculate the minimum and maximim values.
+3. Execute the plotting code to generate the graph. 
+4. The graph will display temperature trends and highlight the highest and lowest values for the week.
+
+Interpretation of Results: 
+The graph shows how temperatures change throughout the week. The graph from our code shows a general upward trend in temperature over the course of the week. The highest temperature occurred later in the week. The highlighted points make it easy to identify the warmest and coolest days of the week.
+This demonstrates how simple data analysis and visualization techniques can be used to identify patterns and trends in real-world weather data.  
