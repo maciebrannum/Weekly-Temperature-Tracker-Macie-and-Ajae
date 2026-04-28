@@ -1,2 +1,2 @@
 # Weekly-Temperature-Tracker-Macie-and-Ajae
-Quarto document and progress report for weekly temperature tracker project.
+Quarto document and final notebook for weekly temperature tracker project.
