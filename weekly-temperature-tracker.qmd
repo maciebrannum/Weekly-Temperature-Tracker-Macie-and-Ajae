@@ -9,7 +9,7 @@ This project is a weekly temperature tracker that records daily high and low tem
 The goal of this project is to collect daily high and low temperature data for one week in Oklahoma City, compute summary statistics (mean, minimum, and maximum), and visualize the data using a line graph. This allows us to observe patterns, compare temperature fluctuations, and identify trends in weather conditions throughout the week.
 
 ## Data Resources
-Temperature data for Oklahoma City from 4/6/26 to 4/12/26 was collected from the National Weather Service website. Daily high and low temperatures were manually recorded and stored in Python lists for analysis. 
+Temperature data for Oklahoma City from 4/6/26 to 4/12/26 was collected from the National Weather Service website. No missing or estimated values were used. All data points were directly recorded from the selected date range. Daily high and low temperatures were manually recorded and stored in Python lists for analysis. 
 
 ## Final Code
 ```{python}
@@ -63,8 +63,7 @@ To run this project, the user needs Python installed along with the Matplotlib l
 4. View the generated graph showing temperature trends and extreme values for the week.
 
 ## Interpretation of Results:
-The graph shows temperature variation over a one-week period in Oklahoma City. The graph from our final code shows a general upward trend in temperature over the course of the week. The highlighted points make it easy to identify the warmest and coolest days.
-This project demonstrates how basic data analysis and visualization techniques can be used to identify patterns and trends in real-world weather data.  
+The graph shows temperature variation over a one-week period in Oklahoma City. The graph from our final code shows a general upward trend in temperature over the course of the week. The highlighted points make it easy to identify the warmest and coolest days. The average from this week was observed at 64.5 degrees which can help us compare overall averages over weeks and months. This project demonstrates how basic data analysis and visualization techniques can be used to identify patterns and trends in real-world weather data. 
 
 ## Contributions
-My contribution to this project included collecting and organizing the temperature data, writing and fixing the Python code, creating the data visualization using Matplotlib, and helping structure and write the notebook. 
+My contribution to this project included collecting and organizing the temperature data, writing and fixing the Python code, creating the data visualization using Matplotlib, and helping structure and write the notebook. My contribution to this project was helping collect the highs and the lows off of the National Weather Service website to create a graph and find the averages. I also helped interpret the results and how they apply in real world scientific situations. 
